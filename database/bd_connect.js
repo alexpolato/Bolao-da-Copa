@@ -1,5 +1,5 @@
 const Connection = require('tedious').Connection;
-//const Request = require('tedious').Request;
+const Request = require('tedious').Request;
 const TYPES = require('tedious').TYPES;
 
 const config = require ('./bdconfig.json')
