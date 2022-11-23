@@ -3,12 +3,12 @@
     "authentication": {
         "type": "default",
         "options": {
-            "userName": "'bdci82252'", 
-            "password": "'Xfcoqyp6'"
+            "userName": "", 
+            "password": ""
         }
     },
     "options": {
         "encrypt": true,
-        "database": "'TIME'"
+        "database": ""
     }
 }
