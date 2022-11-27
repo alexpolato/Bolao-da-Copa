@@ -2,7 +2,6 @@ import MakeList from "../../components/list";
 import "./bet.css";
 import Flag from "../../components/flag";
 import { useState } from "react";
-import Header from "../../components/header";
 import TacaCamp from "../../assets/icons/taca-campeao.png";
 import TacaFinal from "../../assets/icons/taca-final.svg";
 import TacaSemi from "../../assets/icons/taca-semi.svg";
