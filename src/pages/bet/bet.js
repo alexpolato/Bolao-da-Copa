@@ -97,8 +97,6 @@ function Bet() {
     });
   }
 
-
-
   return (
     <div id="app">
       <main className="cardContainer">
@@ -106,9 +104,9 @@ function Bet() {
           <div className="cardSemi">
             <div className="card">
               <div className="cardTitle">
-                <img src={TacaSemi} width='50px' height='50px'/>  
+                <img alt="" src={TacaSemi} width="50px" height="50px" />
                 <h2>Semi-final</h2>
-                <img src={TacaSemi} width='50px' height='50px'/>  
+                <img alt="" src={TacaSemi} width="50px" height="50px" />
               </div>
               <ul>
                 <li>
@@ -159,9 +157,9 @@ function Bet() {
             </div>
             <div class="card">
               <div class="cardTitle">
-                <img src={TacaSemi} width='50px' height='50px'/>  
+                <img alt="" src={TacaSemi} width="50px" height="50px" />
                 <h2>Semi-final</h2>
-                <img src={TacaSemi} width='50px' height='50px'/>  
+                <img alt="" src={TacaSemi} width="50px" height="50px" />
               </div>
               <ul>
                 <li>
@@ -213,9 +211,9 @@ function Bet() {
           <div>
             <div className="card">
               <div className="cardTitle">
-                <img src={TacaFinal} width='50px' height='50px'/>  
-                <h2>Final</h2>  
-                <img src={TacaFinal} width='50px' height='50px'/>  
+                <img alt="" src={TacaFinal} width="50px" height="50px" />
+                <h2>Final</h2>
+                <img alt="" src={TacaFinal} width="50px" height="50px" />
               </div>
               <ul>
                 <li>
@@ -236,14 +234,13 @@ function Bet() {
                       <Flag team={final.team2} />
                     </div>
                   </button>
-                  
                 </li>
               </ul>
             </div>
           </div>
           <div>
             <div className="cardCampeao">
-              <img src={TacaCamp} width='100px' height={100}/>
+              <img alt="" src={TacaCamp} width="100px" height={100} />
               <ul>
                 <li>
                   <div>
@@ -253,7 +250,13 @@ function Bet() {
               </ul>
             </div>
             <div className="submitButton">
-              <button onClick={() => {alert(campeao.team)}}>Enviar</button>
+              <button
+                onClick={() => {
+                  alert(campeao.team);
+                }}
+              >
+                Enviar
+              </button>
             </div>
           </div>
         </div>
@@ -264,7 +267,7 @@ function Bet() {
         </div>
       </main>
     </div>
-  )
+  );
 }
 
 export default Bet;

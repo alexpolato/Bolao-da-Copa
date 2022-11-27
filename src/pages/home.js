@@ -5,7 +5,7 @@ function Home() {
     <div className="Container">
       <selection class="sobre">
         <div class="extras">
-          <img src="neymarjr.png" />
+          <img src="neymarjr.png" alt="" />
         </div>
         <div class="center">
           <div class="texto-sobre">
