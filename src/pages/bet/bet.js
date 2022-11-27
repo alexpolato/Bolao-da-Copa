@@ -122,7 +122,7 @@ function Bet() {
                       // onDragLeave={() => setDragHoverId()}
                       id="team1"
                       className={`${style.bandPicked} ${
-                        dragHoverId === "semiFinal2-team1"
+                        dragHoverId === "semiFinal1-team1"
                           ? style.bandPickedHover
                           : ""
                       }`}
@@ -143,7 +143,7 @@ function Bet() {
                       // onDragEnter={() => setDragHoverId("semiFinal1-team2")}
                       // onDragLeave={() => setDragHoverId()}
                       className={`${style.bandPicked} ${
-                        dragHoverId === "semiFinal2-team1"
+                        dragHoverId === "semiFinal1-team2"
                           ? style.bandPickedHover
                           : ""
                       }`}
@@ -195,7 +195,7 @@ function Bet() {
                       onDragEnter={() => setDragHoverId("semiFinal2-team2")}
                       onDragLeave={() => setDragHoverId()}
                       className={`${style.bandPicked} ${
-                        dragHoverId === "semiFinal2-team1"
+                        dragHoverId === "semiFinal2-team2"
                           ? style.bandPickedHover
                           : ""
                       }`}
