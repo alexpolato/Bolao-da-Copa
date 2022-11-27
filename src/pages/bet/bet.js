@@ -118,8 +118,8 @@ function Bet() {
                       {semiFinal1.team1 && <Flag team={semiFinal1.team1} />}
                     </div>
                     <div
-                      // onDragEnter={() => setDragHoverId("semiFinal1-team1")}
-                      // onDragLeave={() => setDragHoverId()}
+                      onDragEnter={() => setDragHoverId("semiFinal1-team1")}
+                      onDragLeave={() => setDragHoverId()}
                       id="team1"
                       className={`${style.bandPicked} ${
                         dragHoverId === "semiFinal1-team1"
@@ -140,8 +140,8 @@ function Bet() {
                     </div>
                     <div
                       id="team2"
-                      // onDragEnter={() => setDragHoverId("semiFinal1-team2")}
-                      // onDragLeave={() => setDragHoverId()}
+                      onDragEnter={() => setDragHoverId("semiFinal1-team2")}
+                      onDragLeave={() => setDragHoverId()}
                       className={`${style.bandPicked} ${
                         dragHoverId === "semiFinal1-team2"
                           ? style.bandPickedHover
