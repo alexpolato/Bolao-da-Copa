@@ -10,7 +10,9 @@ function Home() {
         <div class="center">
           <div class="texto-sobre">
             <h1>
-              <span style="color:#f2bd31">O melhor site para o seu bolão!</span>
+              <span style={{ color: `#f2bd31` }}>
+                O melhor site para o seu bolão!
+              </span>
               <br />
             </h1>
             <p>Crie seu grupo e convide amigos para participar.</p>
