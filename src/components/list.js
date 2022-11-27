@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import Flag from "./flag";
 
 function MakeList({ teams, dragStart }) {

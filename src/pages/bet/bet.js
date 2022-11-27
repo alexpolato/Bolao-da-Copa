@@ -1,7 +1,11 @@
-import MakeList from "../../components/lista";
+import MakeList from "../../components/list";
 import "./bet.css";
 import Flag from "../../components/flag";
 import { useState } from "react";
+import Header from "../../components/header";
+import TacaCamp from "../../assets/icons/taca-campeao.png";
+import TacaFinal from "../../assets/icons/taca-final.svg";
+import TacaSemi from "../../assets/icons/taca-semi.svg";
 
 function Bet() {
   const teams = [
@@ -44,6 +48,7 @@ function Bet() {
   const [semiFinal1, setSemiFinal1] = useState({});
   const [semiFinal2, setSemiFinal2] = useState({});
   const [final, semiFinal] = useState({});
+  const [campeao, finalCampeao] = useState({});
 
   function dragStart(event) {
     setDragElement(event.target.id);
@@ -83,121 +88,183 @@ function Bet() {
     });
   }
 
+  function handleCampeaoSelect(teamType, team) {
+    finalCampeao((prev) => {
+      return {
+        ...prev,
+        [teamType]: team,
+      };
+    });
+  }
+
+
+
   return (
-    <main class="cardContainer">
-      <div class="cards">
-        <h2>Monte a Semi-final da Copa</h2>
-        <div class="cardSemi">
-          <div class="card">
-            <h2>Semi-final 1</h2>
-            <ul>
-              <li>
-                <button
-                  onClick={() => handleFinalSelect("team1", semiFinal1.team1)}
-                  class="buttonFlags"
-                >
-                  <div className="flagWrapper">
-                    <Flag team={semiFinal1.team1} />
-                  </div>
-                  <div
-                    onDragEnter={() => setDragHoverId("semiFinal1-team1")}
-                    onDragLeave={() => setDragHoverId()}
-                    id="team1"
-                    class={`bandPicked ${
-                      dragHoverId === "semiFinal1-team1"
-                        ? "bandPickedHover"
-                        : ""
-                    }`}
-                    onDrop={drop1}
-                    onDragOver={allowDrop}
-                  ></div>
-                </button>
-                <strong>vs</strong>
-                <button
-                  onClick={() => handleFinalSelect("team1", semiFinal1.team2)}
-                  class="buttonFlags"
-                >
-                  <div className="flagWrapper">
-                    <Flag team={semiFinal1.team2} />
-                  </div>
-                  <div
-                    id="team2"
-                    onDragEnter={() => setDragHoverId("semiFinal1-team2")}
-                    onDragLeave={() => setDragHoverId()}
-                    class="bandPicked"
-                    onDrop={drop1}
-                    onDragOver={allowDrop}
-                  ></div>
-                </button>
-              </li>
-            </ul>
+    <div id="app">
+      <main className="cardContainer">
+        <div className="cards">
+          <div className="cardSemi">
+            <div className="card">
+              <div className="cardTitle">
+                <img src={TacaSemi} width='50px' height='50px'/>  
+                <h2>Semi-final</h2>
+                <img src={TacaSemi} width='50px' height='50px'/>  
+              </div>
+              <ul>
+                <li>
+                  <div></div>
+                  <button
+                    onClick={() => handleFinalSelect("team1", semiFinal1.team1)}
+                    className="buttonFlags"
+                  >
+                    <div class="flagWrapper">
+                      <Flag team={semiFinal1.team1} />
+                    </div>
+                    <div
+                      onDragEnter={() => setDragHoverId("semiFinal1-team1")}
+                      onDragLeave={() => setDragHoverId()}
+                      id="team1"
+                      class={`bandPicked ${
+                        dragHoverId === "semiFinal1-team1"
+                          ? "bandPickedHover"
+                          : ""
+                      }`}
+                      onDrop={drop1}
+                      onDragOver={allowDrop}
+                    ></div>
+                  </button>
+                  <strong>vs</strong>
+                  <button
+                    onClick={() => handleFinalSelect("team1", semiFinal1.team2)}
+                    class="buttonFlags"
+                  >
+                    <div className="flagWrapper">
+                      <Flag team={semiFinal1.team2} />
+                    </div>
+                    <div
+                      id="team2"
+                      onDragEnter={() => setDragHoverId("semiFinal1-team2")}
+                      onDragLeave={() => setDragHoverId()}
+                      class={`bandPicked ${
+                        dragHoverId === "semiFinal1-team2"
+                          ? "bandPickedHover"
+                          : ""
+                      }`}
+                      onDrop={drop1}
+                      onDragOver={allowDrop}
+                    ></div>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="cardTitle">
+                <img src={TacaSemi} width='50px' height='50px'/>  
+                <h2>Semi-final</h2>
+                <img src={TacaSemi} width='50px' height='50px'/>  
+              </div>
+              <ul>
+                <li>
+                  <button
+                    onClick={() => handleFinalSelect("team2", semiFinal2.team1)}
+                    class="buttonFlags"
+                  >
+                    <div class="flagWrapper">
+                      <Flag team={semiFinal2.team1} />
+                    </div>
+                    <div
+                      className={`bandPicked ${
+                        dragHoverId === "semiFinal2-team1"
+                          ? "bandPickedHover"
+                          : ""
+                      }`}
+                      id="team1"
+                      onDragEnter={() => setDragHoverId("semiFinal2-team1")}
+                      onDragLeave={() => setDragHoverId()}
+                      onDrop={drop2}
+                      onDragOver={allowDrop}
+                    ></div>
+                  </button>
+                  <strong>vs</strong>
+                  <button
+                    onClick={() => handleFinalSelect("team2", semiFinal2.team2)}
+                    className="buttonFlags"
+                  >
+                    <div class="flagWrapper">
+                      <Flag team={semiFinal2.team2} />
+                    </div>
+                    <div
+                      id="team2"
+                      onDragEnter={() => setDragHoverId("semiFinal2-team2")}
+                      onDragLeave={() => setDragHoverId()}
+                      className={`bandPicked ${
+                        dragHoverId === "semiFinal2-team2"
+                          ? "bandPickedHover"
+                          : ""
+                      }`}
+                      onDrop={drop2}
+                      onDragOver={allowDrop}
+                    ></div>
+                  </button>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="card">
-            <h2>Semi-final 2</h2>
-            <ul>
-              <li>
-                <button
-                  onClick={() => handleFinalSelect("team2", semiFinal2.team1)}
-                  class="buttonFlags"
-                >
-                  <div className="flagWrapper">
-                    <Flag team={semiFinal2.team1} />
+          <div>
+            <div className="card">
+              <div className="cardTitle">
+                <img src={TacaFinal} width='50px' height='50px'/>  
+                <h2>Final</h2>  
+                <img src={TacaFinal} width='50px' height='50px'/>  
+              </div>
+              <ul>
+                <li>
+                  <button
+                    onClick={() => handleCampeaoSelect("team", final.team1)}
+                    className="buttonFlags"
+                  >
+                    <div className="bandPicked">
+                      <Flag team={final.team1} />
+                    </div>
+                  </button>
+                  <strong>vs</strong>
+                  <button
+                    onClick={() => handleCampeaoSelect("team", final.team2)}
+                    className="buttonFlags"
+                  >
+                    <div className="bandPicked">
+                      <Flag team={final.team2} />
+                    </div>
+                  </button>
+                  
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div className="cardCampeao">
+              <img src={TacaCamp} width='100px' height={100}/>
+              <ul>
+                <li>
+                  <div>
+                    <Flag team={campeao.team} />
                   </div>
-                  <div
-                    class="bandPicked"
-                    id="team1"
-                    onDragEnter={() => setDragHoverId("semiFinal2-team1")}
-                    onDragLeave={() => setDragHoverId()}
-                    onDrop={drop2}
-                    onDragOver={allowDrop}
-                  ></div>
-                </button>
-                <strong>vs</strong>
-                <button
-                  onClick={() => handleFinalSelect("team2", semiFinal2.team2)}
-                  class="buttonFlags"
-                >
-                  <div className="flagWrapper">
-                    <Flag team={semiFinal2.team2} />
-                  </div>
-                  <div
-                    id="team2"
-                    onDragEnter={() => setDragHoverId("semiFinal2-team2")}
-                    onDragLeave={() => setDragHoverId()}
-                    class="bandPicked"
-                    onDrop={drop2}
-                    onDragOver={allowDrop}
-                  ></div>
-                </button>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
+            <div className="submitButton">
+              <button onClick={() => {alert(campeao.team)}}>Enviar</button>
+            </div>
           </div>
         </div>
-        <div class="cardFinal">
-          <div class="card">
-            <h2>Final</h2>
-            <ul>
-              <li>
-                <div class="bandPicked">
-                  <Flag team={final.team1} />
-                </div>
-                <strong>vs</strong>
-                <div class="bandPicked">
-                  <Flag team={final.team2} />
-                </div>
-              </li>
-            </ul>
+        <div>
+          <div className="lista" onDrop="drop(event)">
+            <MakeList teams={teams} dragStart={dragStart} />
           </div>
         </div>
-      </div>
-      <div>
-        <h2>Escolha os times aqui!</h2>
-        <div class="lista" ondrop="drop(event)">
-          <MakeList teams={teams} dragStart={dragStart} />
-        </div>
-      </div>
-    </main>
-  );
+      </main>
+    </div>
+  )
 }
 
 export default Bet;

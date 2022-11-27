@@ -7,7 +7,7 @@
 body {
   background-color: #11111d;
   color: white;
-  /* background-image: url(../src/assets/luz.svg); */
+  background-image: url("../../assets/icons/bg-luz.svg");
   background-position-y: 53.7%;
   background-position-x: center;
 }
@@ -16,28 +16,14 @@ body * {
   font-family: "Roboto", sans-serif;
 }
 
-.title {
-  color: #f2bd31;
-  font-size: 40px;
-  font-weight: 700;
-}
-
 #app {
   width: fit-content;
   margin: 52px auto;
   color: white;
 }
 
-header {
-  margin-bottom: 63px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
 .lista {
-  background: #1a1a16;
+  background: #16171a;
   margin: 10px 0 0 0px;
   border-right: 1px solid #f2bd31;
   border-bottom: 1px solid #f2bd31;
@@ -71,7 +57,7 @@ header {
 }
 
 .card {
-  background: #1a1a16;
+  background: #16171a;
   border-radius: 6px;
   border-bottom: 1px solid #f2bd31;
   width: 300px;
@@ -85,25 +71,17 @@ header {
 .card h2 {
   display: flex;
   gap: 16px;
-  justify-content: center;
-  align-items: center;
-
-  padding: 8px 16px;
-  border: 1px solid #746615;
-  border-radius: 6px;
-
-  width: fit-content;
   margin-inline: auto;
-  margin-bottom: 30px;
-
   color: #f2bd31;
 }
 
-.card h2 span {
-  font-weight: 700;
-  font-size: 14px;
-  color: #e1e1e6;
-  text-transform: uppercase;
+.cardTitle{
+  display: flex;
+  border-bottom: 1px solid #746615;
+  border-radius: 6px;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 10px;
 }
 
 .card ul {
@@ -147,6 +125,50 @@ header {
 }
 .bandPickedHover {
   background: rgba(255, 255, 255, 0.1);
+}
+
+.cardCampeao{
+  background: #16171a;
+  border-radius: 6px;
+  border-bottom: 1.3px solid #f2bd31;
+  border-top: 1.3px solid #f2bd31;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 23px;
+  margin: 10px;
+}
+
+.cardCampeao img{
+  color: #f2bd31;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.cardCampeao ul li {
+  display: flex;
+}
+
+.submitButton{
+  display: flex;
+}
+
+.submitButton button{
+  margin: 10px auto;
+  height: 37px;
+  width: 40%;
+  background-color:#f2bd31;
+  border-radius: 6px;
+  border: none;
+}
+
+.submitButton button:hover{
+  transition: 400ms;
+  cursor: pointer;
+  background-color:#ad8824;
 }
 
 .card ul li strong {

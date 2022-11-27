@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #11111d;
+}
+
+header {
+    width: 1000px;
+    margin: 52px auto;
+    color: #f2bd31;
+    margin-bottom: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logoContainer{
+    display: flex;  
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 40px;
+  } 
+  
+  .menu a{
+    color: #f2bd31;
+    margin-right: 15px;
+  }
+  
+  .menu a:hover{
+    color: #7b621c;
+  }
