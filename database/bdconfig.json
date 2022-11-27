@@ -1,0 +1,14 @@
+{
+    "server": "localhost",
+    "authentication": {
+        "type": "default",
+        "options": {
+            "userName": "", 
+            "password": ""
+        }
+    },
+    "options": {
+        "encrypt": true,
+        "database": ""
+    }
+}

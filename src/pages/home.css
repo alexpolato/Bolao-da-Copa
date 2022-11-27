@@ -1,3 +1,98 @@
-.Container{
-    background-color: aliceblue;
+.Container {
+  background-color: aliceblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #11111d;
+  font-family: "Montserrat", sans-serif;
+}
+
+.center {
+  display: flex;
+  padding: 0 2%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+header {
+  height: 200px;
+  padding: 20px 0;
+}
+
+.logo {
+  width: 50%;
+}
+
+.menu {
+  padding-top: 30px;
+  width: 50%;
+  text-align: right;
+}
+.menu a {
+  color: #f2bd31;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 15px;
+}
+.menu a:hover {
+  color: #009c3b;
+}
+
+selection.sobre {
+  height: calc(100% - 200px);
+  position: relative;
+}
+
+.extras {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 550px;
+  height: 250px;
+}
+
+.texto-sobre {
+  margin-top: 30px;
+}
+
+.texto-sobre h1 {
+  font-size: 40px;
+}
+
+.texto-sobre p {
+  margin: 20px 0;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.texto-sobre button {
+  position: relative;
+  top: 35px;
+  left: 20px;
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif;
+  width: 80px;
+  height: 35px;
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #009c3b;
+  cursor: pointer;
+}
+.texto-sobre button:hover {
+  background: #f2bd31;
 }
