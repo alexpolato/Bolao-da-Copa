@@ -16,7 +16,7 @@ body * {
   font-family: "Roboto", sans-serif;
 }
 
-#app {
+.app {
   width: fit-content;
   margin: 52px auto;
   color: white;
@@ -75,7 +75,7 @@ body * {
   color: #f2bd31;
 }
 
-.cardTitle{
+.cardTitle {
   display: flex;
   border-bottom: 1px solid #746615;
   border-radius: 6px;
@@ -127,7 +127,7 @@ body * {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.cardCampeao{
+.cardCampeao {
   background: #16171a;
   border-radius: 6px;
   border-bottom: 1.3px solid #f2bd31;
@@ -140,8 +140,8 @@ body * {
   margin: 10px;
 }
 
-.cardCampeao img{
-  color: #f2bd31;  
+.cardCampeao img {
+  color: #f2bd31;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,23 +152,23 @@ body * {
   display: flex;
 }
 
-.submitButton{
+.submitButton {
   display: flex;
 }
 
-.submitButton button{
+.submitButton button {
   margin: 10px auto;
   height: 37px;
   width: 40%;
-  background-color:#f2bd31;
+  background-color: #f2bd31;
   border-radius: 6px;
   border: none;
 }
 
-.submitButton button:hover{
+.submitButton button:hover {
   transition: 400ms;
   cursor: pointer;
-  background-color:#ad8824;
+  background-color: #ad8824;
 }
 
 .card ul li strong {
