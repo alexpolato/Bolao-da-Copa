@@ -1,6 +1,6 @@
 import paths from "./utils/paths.js";
 import Bet from "./pages/bet/bet";
-import Home from "./pages/home";
+import Home from "./pages/home/home";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

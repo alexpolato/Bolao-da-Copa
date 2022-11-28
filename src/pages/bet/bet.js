@@ -5,6 +5,7 @@ import { useState } from "react";
 import TacaCamp from "../../assets/icons/taca-campeao.png";
 import TacaFinal from "../../assets/icons/taca-final.svg";
 import TacaSemi from "../../assets/icons/taca-semi.svg";
+import Header from "../../components/header";
 
 function Bet() {
   const teams = [
@@ -98,6 +99,7 @@ function Bet() {
 
   return (
     <div className={style.app}>
+      <Header />
       <main className={style.cardContainer}>
         <div className={style.cards}>
           <div className={style.cardSemi}>
@@ -109,7 +111,6 @@ function Bet() {
               </div>
               <ul>
                 <li>
-                  <div></div>
                   <button
                     onClick={() => handleFinalSelect("team1", semiFinal1.team1)}
                     className={style.buttonFlags}
