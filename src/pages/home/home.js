@@ -1,6 +1,7 @@
 import style from "./home.module.css";
 import Header from "../../components/header";
 import NeymarBg from "../../assets/icons/neymarjr.png";
+import paths from "../../utils/paths";
 
 function Home() {
   return (
@@ -20,8 +21,12 @@ function Home() {
                 <br />
               </h1>
               <p>Crie seu grupo e convide amigos para participar.</p>
-              <button>Login</button>
-              <button>Cadastrar</button>
+              <a href={paths.login}>
+                <button>Login</button>
+              </a>
+              <a href={paths.login}>
+                <button>Cadastrar</button>
+              </a>
             </div>
           </div>
         </selection>

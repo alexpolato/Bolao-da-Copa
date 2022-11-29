@@ -25,10 +25,8 @@ header {
 }
 .extras img {
   display: flex;
-  flex-direction: row-reverse;
-
-  overflow-y: hidden;
-  overflow-x: hidden;
+  width: fit-content;
+  margin-top: 50px;
 }
 .sobre {
   height: calc(100% - 200px);

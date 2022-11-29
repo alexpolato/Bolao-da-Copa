@@ -1,10 +1,8 @@
 const paths = {
-    home: `/`,
-    bet: `/bet`,
-    login: `/login`,
-    cadastro: `/cadastro`,
-}
+  home: `/`,
+  bet: `/bet`,
+  login: `/login`,
+  signup: `/signup`,
+};
 
-
-
-export default paths
+export default paths;
