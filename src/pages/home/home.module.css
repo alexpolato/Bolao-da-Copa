@@ -17,7 +17,7 @@
 
 header {
   height: 200px;
-  padding: 20px 0;
+  /* padding: 20px 0; */
 }
 
 .menu a:hover {
@@ -27,6 +27,7 @@ header {
   display: flex;
   width: fit-content;
   margin-top: 50px;
+  margin-left: auto;
 }
 .sobre {
   height: calc(100% - 200px);

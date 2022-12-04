@@ -1,6 +1,6 @@
 import style from "./home.module.css";
 import Header from "../../components/header";
-import NeymarBg from "../../assets/icons/neymarjr.png";
+import NeymarBg from "../../assets/icons/neymarjr2.png";
 import paths from "../../utils/paths";
 
 function Home() {

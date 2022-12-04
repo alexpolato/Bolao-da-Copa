@@ -12,6 +12,7 @@ function AppRoutes() {
         <Route path={paths.home} element={<Home />} />
         <Route path={paths.bet} element={<Bet />} />
         <Route path={paths.login} element={<Login />} />
+        <Route path={paths.signup} element={<Login />} />
       </Routes>
     </BrowserRouter>
   );

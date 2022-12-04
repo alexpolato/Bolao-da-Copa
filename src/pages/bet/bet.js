@@ -252,7 +252,30 @@ function Bet() {
             <div className={style.submitButton}>
               <button
                 onClick={() => {
-                  alert(campeao.team);
+                  if (
+                    semiFinal1.team1 &&
+                    semiFinal1.team2 &&
+                    semiFinal2.team1 &&
+                    semiFinal2.team2 &&
+                    final.team1 &&
+                    final.team2 &&
+                    campeao.team !== undefined
+                  ) {
+                    if (
+                      semiFinal1.team1 !== semiFinal1.team2 &&
+                      semiFinal1.team1 !== semiFinal2.team1 &&
+                      semiFinal1.team1 !== semiFinal2.team2 &&
+                      semiFinal1.team2 !== semiFinal2.team1 &&
+                      semiFinal1.team2 !== semiFinal2.team2 &&
+                      semiFinal2.team1 !== semiFinal2.team2
+                    ) {
+                      alert(campeao.team);
+                    } else {
+                      alert("Erro: em algum dos jogos ha times se repetindo!");
+                    }
+                  } else {
+                    alert("Erro: aposta incompleta!");
+                  }
                 }}
               >
                 Enviar
