@@ -52,11 +52,7 @@
   font-family: "Montserrat", sans-serif;
   width: 80px;
   height: 35px;
-  color: #fff;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
   background: #f7dd43;
   cursor: pointer;
 }

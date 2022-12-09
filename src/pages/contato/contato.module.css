@@ -1,0 +1,64 @@
+.Container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #11111d;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+}
+/* 
+body {
+  background-color: #11111d;
+  background-position-y: 53.7%;
+  background-position-x: center;
+} */
+
+.center {
+  display: flex;
+  padding: 0 2%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+/* html,
+body {
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+} */
+
+/* .sobre {
+  height: calc(100% - 200px);
+  position: relative;
+} */
+
+.extras {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* height: 250px; */
+}
+
+.texto {
+  margin-top: 30px;
+}
+
+.texto h1 {
+  font-size: 40px;
+}
+
+.texto p {
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Montserrat";
+}
+
+.texto a:hover {
+  color: #d29f12;
+  transition: 220ms;
+}
+.texto a {
+  color: #009c3b;
+}

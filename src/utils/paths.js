@@ -2,7 +2,7 @@ const paths = {
   home: `/`,
   bet: `/bet`,
   login: `/login`,
-  signup: `/signup`,
+  contato: `/contato`,
 };
 
 export default paths;

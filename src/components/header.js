@@ -16,7 +16,7 @@ function Header() {
       <div class="menu">
         <a href={paths.bet}>Bolão</a>
         {/* <a href={paths.}>Regras</a> */}
-        {/* <a href={paths.bet}>Contato</a> */}
+        <a href={paths.contato}>Contato</a>
       </div>
     </header>
   );
