@@ -5,10 +5,12 @@ import api from "../../config/api";
 import { useState } from "react";
 import { Navigate, redirect, Route } from "react-router-dom";
 import paths from "../../utils/paths";
+import Bet from "../bet/bet";
 
 function Login() {
   const [name, setName] = useState("");
   const [pass, setPass] = useState("");
+  const [id, setId] = useState("");
 
   async function login(e) {
     e.preventDefault();
@@ -21,7 +23,9 @@ function Login() {
       if (result.data == "Username or password invalid") {
         alert("Username or password invalid");
       } else {
-        alert(result.data.id);
+        localStorage.setItem("ID", id);
+        setId(result.data.id);
+        alert(id);
       }
     } catch (error) {
       console.log("Authorization failed : " + error.message);
@@ -35,6 +39,7 @@ function Login() {
         password: pass,
       });
       console.log(result);
+      alert(result.data);
     } catch (error) {
       console.log("Authorization failed : " + error.message);
     }
