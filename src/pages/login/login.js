@@ -21,7 +21,7 @@ function Login() {
       if (result.data == "Username or password invalid") {
         alert("Username or password invalid");
       } else {
-        <Navigate to={paths.bet} />;
+        alert(result.data.id);
       }
     } catch (error) {
       console.log("Authorization failed : " + error.message);
