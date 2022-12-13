@@ -72,7 +72,6 @@ function Bet() {
         final_team_2: final.team2,
         champion: campeao.team,
       });
-      alert("oii!");
       console.log(result);
       if (result.data === "You already voted") {
         alert("You already voted");

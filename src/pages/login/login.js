@@ -86,15 +86,15 @@ function Login() {
             />
           </p>
           <p>
-            {/* <div className={style.checkbox}>
-                <input
-                  type="checkbox"
-                  name="manterlogado"
-                  id="manterlogado"
-                  value=""
-                />
-                <label for="manterlogado">Manter-me logado</label>
-              </div> */}
+            <div className={style.checkbox}>
+              <input
+                type="checkbox"
+                name="manterlogado"
+                id="manterlogado"
+                value=""
+              />
+              <label for="manterlogado">Manter-me logado</label>
+            </div>
           </p>
           <p>
             <button

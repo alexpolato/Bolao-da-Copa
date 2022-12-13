@@ -17,7 +17,7 @@ function Contato() {
               <br />
             </h1>
             <p>
-              <a href="tel:+55(19)98282-2210">Telfone</a>
+              <a href="tel:+55(19)98282-2210">Telefone</a>
             </p>
             <p>
               <a href="mailto:contatobolaodacopa@gmail.com?subject=Contato com Bolão da Copa&cc=contatobolaodacopa@gmail.com&bcc=contatobolaodacopa@gmail.com&body">
