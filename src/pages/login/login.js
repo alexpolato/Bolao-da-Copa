@@ -3,7 +3,8 @@ import Header from "../../components/header";
 import NeymarBg from "../../assets/icons/neymarjr2.png";
 import api from "../../config/api";
 import { useState } from "react";
-import { Navigate, redirect, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+// import { Navigate, redirect, Route } from "react-router-dom";
 import paths from "../../utils/paths";
 import Bet from "../bet/bet";
 
@@ -11,6 +12,8 @@ function Login() {
   const [name, setName] = useState("");
   const [pass, setPass] = useState("");
   const [id, setId] = useState("");
+
+  const navigate = useNavigate();
 
   async function login(e) {
     e.preventDefault();
@@ -23,9 +26,10 @@ function Login() {
       if (result.data == "Username or password invalid") {
         alert("Username or password invalid");
       } else {
-        localStorage.setItem("ID", id);
         setId(result.data.id);
-        alert(id);
+        localStorage.setItem("userID", id);
+        alert("Logado!");
+        navigate("/bet");
       }
     } catch (error) {
       console.log("Authorization failed : " + error.message);
@@ -39,7 +43,13 @@ function Login() {
         password: pass,
       });
       console.log(result);
-      alert(result.data);
+      if (result.data == "User already exists") {
+        alert("User already exists");
+      } else {
+        setId(result.data.id);
+        localStorage.setItem("userID", id);
+        alert("Registrado!");
+      }
     } catch (error) {
       console.log("Authorization failed : " + error.message);
     }
